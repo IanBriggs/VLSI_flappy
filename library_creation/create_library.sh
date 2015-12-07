@@ -20,8 +20,7 @@ then
     exit -1
 fi
 
-cp abstract.lef WORK/temp
-sed '1,/END PROPERTYDEFINITIONS/d' WORK/temp
+sed '1,/END PROPERTYDEFINITIONS/d' abstract.lef > WORK/temp
 cat TechHeader.lef WORK/temp > library_files/Lib6710_Personal.lef
 
 

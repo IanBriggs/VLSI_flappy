@@ -1,5 +1,3 @@
-//Verilog HDL for "Lib6710_Personal", "BACKGROUND_VGA" "behavioral"
-
 module BACKGROUND_VGA ( Y, RGB );
 
    parameter GROUND_START = 3'd230;
@@ -21,5 +19,5 @@ module BACKGROUND_VGA ( Y, RGB );
 	     TEMP_RGB = 3'b010;
 	  end
 	RGB = TEMP_RGB;
-     end // always@ (X or Y)
+     end // always@ (Y)
 endmodule // BACKGROUND_VGA
