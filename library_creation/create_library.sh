@@ -4,20 +4,20 @@ set -e i
 
 if [! -a foo.scs]
 then
-echo "You must first netlist ss_test and put the netlist into foo.scs"
-exit -1
+    echo "You must first netlist ss_test and put the netlist into foo.scs"
+    exit -1
 fi
 
 if [! -a abstract.lef]
 then
-echo "You must first abstract your library and export it to abstract.lef"
-exit -1
+    echo "You must first abstract your library and export it to abstract.lef"
+    exit -1
 
 fi
 if [! -a footprints.def]
 then
-echo "You must first create footprints.def"
-exit -1
+    echo "You must first create footprints.def"
+    exit -1
 fi
 
 cp abstract.lef WORK/temp
