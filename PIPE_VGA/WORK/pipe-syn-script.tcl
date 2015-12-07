@@ -64,9 +64,9 @@ set mapEffort2 medium   ;# second pass - low, medium, or high
 set useUngroup 1        ;# 0 if no flatten, 1 if flatten
 
 # Timing and loading information				
-set myPeriod_ns 7   ;# desired clock period (sets speed goal)
-set myInDelay_ns 0 ;# delay from clock to inputs valid
-set myOutDelay_ns 1;# delay from clock to output valid
+set myPeriod_ns 10   ;# desired clock period (sets speed goal)
+set myInDelay_ns .25 ;# delay from clock to inputs valid
+set myOutDelay_ns .25 ;# delay from clock to output valid
 set myInputBuf INVX4  ;# name of cell driving the inputs
 set myLoadLibrary Lib6710_Personal ;# name of library the cell comes from
 set myLoadPin A       ;# name of pin that outputs drive
