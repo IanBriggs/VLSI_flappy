@@ -2,9 +2,9 @@
 
 set -e i
 
-if [ ! -f BIRD_VGA.v ]
+if [ ! -f BACKGROUND_VGA.v ]
 then
-    echo "You must first create BIRD_VGA.v"
+    echo "You must first create BACKGROUND_VGA.v"
     exit -1
 fi
 
@@ -32,15 +32,15 @@ then
     exit -1
 fi
 
-cp BIRD_VGA.v WORK
+cp BACKGROUND_VGA.v WORK
 cp Lib6710_Personal.* WORK
 
 cd WORK
 cp synopsys_dc.setup.tcl .synopsys_dc.setup
 
-syn-dc -f bird-syn-script.tcl
+syn-dc -f background-syn-script.tcl
 
-cad-edi -no_gui -file top-bird.tcl
+cad-edi -no_gui -file top-background.tcl
 
-cp BIRD_VGA_struct.v ../cadence_files/
-cp BIRD_VGA.def ../cadence_files/
+cp BACKGROUND_VGA_struct.v ../cadence_files/
+cp BACKGROUND_VGA.def ../cadence_files/
