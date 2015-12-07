@@ -1,0 +1,85 @@
+cell ADDER {
+footprint adder ;
+area 18 ;
+};
+
+cell AOI22 {
+footprint aoi22 ;
+area 6 ;
+};
+
+cell BUFX4 {
+footprint buf ;
+area 4 ;
+};
+
+cell BUFX8 {
+footprint buf ;
+area 5 ;
+};
+
+cell DFF {
+footprint dff ;
+area 17 ;
+};
+
+cell FILLER {
+footprint filler ;
+area 2 ;
+};
+
+cell INVX1 {
+footprint inv ;
+area 3 ;
+};
+
+cell INVX4 {
+footprint inv ;
+area 3 ;
+};
+
+cell INVX8 {
+footprint inv ;
+area 4 ;
+};
+
+cell MUX2X1 {
+footprint mux2 ;
+area 6 ;
+};
+
+cell NAND2X1 {
+footprint nand2 ;
+area 4 ;
+};
+
+cell NAND2X2 {
+footprint nand2 ;
+area 4 ;
+};
+
+cell NOR2X1 {
+footprint nor2 ;
+area 4 ;
+};
+
+cell OAI22 {
+footprint oai22 ;
+area 6 ;
+};
+
+cell TIEHI {
+footprint tiehi ;
+area 3 ;
+};
+
+cell TIELO {
+footprint tielo ;
+area 3 ;
+};
+
+cell XOR {
+footprint xor ;
+area 9 ;
+};
+

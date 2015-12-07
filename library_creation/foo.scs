@@ -1,0 +1,391 @@
+// Generated for: spectre
+// Generated on: Dec  6 16:22:24 2015
+// Design library name: Lib6710_Personal
+// Design cell name: sstest
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+include "/uusoc/facility/cad_common/local/class/6710/F15/cadence/Spectre/T89Y.scs"
+
+// Library name: Lib6710_Personal
+// Cell name: ADDER
+// View name: cmos_sch
+subckt ADDER A B CIN COUT SUM inh_inh_bn _net0
+    M3 (net11 B vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M4 (net53 B vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M22 (net42 A vdd! _net0) ami06P w=9u l=600n as=1.35e-11 ad=1.35e-11 \
+        ps=21.0u pd=21.0u m=1 region=sat
+    M2 (net11 A vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M5 (net62 A net53 _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M6 (net62 CIN net11 _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M26 (SUM net20 vdd! _net0) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M21 (net41 B net42 _net0) ami06P w=9u l=600n as=1.35e-11 ad=1.35e-11 \
+        ps=21.0u pd=21.0u m=1 region=sat
+    M12 (net18 A vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M15 (net20 net62 net18 _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M14 (net18 CIN vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M13 (net18 B vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M20 (net20 CIN net41 _net0) ami06P w=9u l=600n as=1.35e-11 ad=1.35e-11 \
+        ps=21.0u pd=21.0u m=1 region=sat
+    M29 (COUT net62 vdd! _net0) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M17 (net16 B 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M16 (net20 net62 net16 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 \
+        ad=4.5e-12 ps=9u pd=9u m=1 region=sat
+    M27 (SUM net20 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M8 (net62 A net52 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M7 (net62 CIN net10 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 \
+        ad=4.5e-12 ps=9u pd=9u m=1 region=sat
+    M11 (net52 B 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M10 (net10 B 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M9 (net10 A 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M25 (net58 A 0 inh_inh_bn) ami06N w=4.5u l=600n as=6.75e-12 \
+        ad=6.75e-12 ps=12.0u pd=12.0u m=1 region=sat
+    M24 (net59 B net58 inh_inh_bn) ami06N w=4.5u l=600n as=6.75e-12 \
+        ad=6.75e-12 ps=12.0u pd=12.0u m=1 region=sat
+    M23 (net20 CIN net59 inh_inh_bn) ami06N w=4.5u l=600n as=6.75e-12 \
+        ad=6.75e-12 ps=12.0u pd=12.0u m=1 region=sat
+    M19 (net16 CIN 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M18 (net16 A 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M28 (COUT net62 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+ends ADDER
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: AOI22
+// View name: cmos_sch
+subckt AOI22 A B C D Y inh_inh_bn _net0
+    M5 (Y C net017 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M2 (Y A net7 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M4 (net017 D 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M3 (net7 B 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M0 (net019 A vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M1 (Y C net019 inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M6 (Y D net019 inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M7 (net019 B vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+ends AOI22
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: BUFX4
+// View name: cmos_sch
+subckt BUFX4 A Y inh_inh_bn _net0
+    M1 (Y net6 0 _net0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M0 (net6 A 0 _net0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    M3 (Y net6 vdd! inh_inh_bn) ami06P w=12.0u l=600n as=1.8e-11 \
+        ad=1.8e-11 ps=27.0u pd=27.0u m=1 region=sat
+    M2 (net6 A vdd! inh_inh_bn) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+ends BUFX4
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: BUFX8
+// View name: cmos_sch
+subckt BUFX8 A Y inh_inh_bn _net0
+    M1 (Y net6 0 _net0) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+    M0 (net6 A 0 _net0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    M3 (Y net6 vdd! inh_inh_bn) ami06P w=24.0u l=600n as=3.6e-11 \
+        ad=3.6e-11 ps=51.0u pd=51.0u m=1 region=sat
+    M2 (net6 A vdd! inh_inh_bn) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+ends BUFX8
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: DFF
+// View name: cmos_sch
+subckt DFF CLK CLRB D Q QB inh_inh_bn _net0
+    M9 (net024 net018 net16 _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M22 (net019 CLK D _net0) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    M8 (net024 CLK net16 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M21 (net019 net018 D inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M42 (net038 net029 vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M39 (net16 CLRB vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M48 (QB Q vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    M45 (net029 CLRB vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M17 (net018 CLK vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M15 (Q net024 net038 _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M30 (net024 CLK net34 _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M29 (net34 Q vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    M7 (net16 net019 vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M24 (net035 net16 vdd! _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M23 (net019 net018 net035 _net0) ami06P w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M43 (Q net029 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M41 (net037 CLRB 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M44 (net029 CLRB 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M47 (QB Q 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    M16 (net018 CLK 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M14 (Q net024 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M27 (net024 net018 net034 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M28 (net034 Q 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M6 (net16 net019 net037 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M25 (net019 CLK net45 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+    M26 (net45 net16 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 \
+        ad=2.25e-12 ps=6u pd=6u m=1 region=sat
+ends DFF
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: INVX1
+// View name: cmos_sch
+subckt INVX1 A Y inh_inh_bn _net0
+    M0 (Y A 0 _net0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    M1 (Y A vdd! inh_inh_bn) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+ends INVX1
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: INVX4
+// View name: cmos_sch
+subckt INVX4 A Y inh_inh_bn _net0
+    M0 (Y A 0 _net0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M1 (Y A vdd! inh_inh_bn) ami06P w=12.0u l=600n as=1.8e-11 ad=1.8e-11 \
+        ps=27.0u pd=27.0u m=1 region=sat
+ends INVX4
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: INVX8
+// View name: cmos_sch
+subckt INVX8 A Y inh_inh_bn _net0
+    M0 (Y A 0 _net0) ami06N w=12.0u l=600n as=1.8e-11 ad=1.8e-11 ps=27.0u \
+        pd=27.0u m=1 region=sat
+    M1 (Y A vdd! inh_inh_bn) ami06P w=24.0u l=600n as=3.6e-11 ad=3.6e-11 \
+        ps=51.0u pd=51.0u m=1 region=sat
+ends INVX8
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: MUX2X1
+// View name: cmos_sch
+subckt MUX2X1 D0 D1 S SB Y inh_inh_bn _net0
+    M3 (net12 D1 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M2 (Y S net12 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M1 (net15 D0 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M0 (Y SB net15 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M7 (net16 D0 vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M6 (net11 D1 vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M5 (Y SB net11 inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M4 (Y S net16 inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+ends MUX2X1
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: NAND2X1
+// View name: cmos_sch
+subckt NAND2X1 A B Y inh_inh_bn _net0
+    M1 (net10 B 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M0 (Y A net10 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M3 (Y A vdd! inh_inh_bn) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M2 (Y B vdd! inh_inh_bn) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+ends NAND2X1
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: NAND2X2
+// View name: cmos_sch
+subckt NAND2X2 A B Y inh_inh_bn _net0
+    M1 (net10 B 0 _net0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M0 (Y A net10 _net0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M3 (Y A vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M2 (Y B vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+ends NAND2X2
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: NOR2X1
+// View name: cmos_sch
+subckt NOR2X1 A B Y inh_inh_bn _net0
+    M1 (Y B 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u pd=9u \
+        m=1 region=sat
+    M0 (Y A 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u pd=9u \
+        m=1 region=sat
+    M3 (Y B net11 inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M2 (net11 A vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+ends NOR2X1
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: OAI22
+// View name: cmos_sch
+subckt OAI22 A B C D Y inh_inh_bn _net0
+    M4 (Y D net23 _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M5 (net23 C vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M6 (net24 A vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M7 (Y B net24 _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M3 (Y C net15 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M2 (net15 B 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M1 (net15 A 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M0 (Y D net15 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+ends OAI22
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: TIEHI
+// View name: cmos_sch
+subckt TIEHI Y inh_inh_bn _net0
+    M0 (net3 net3 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M1 (Y net3 vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+ends TIEHI
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: TIELO
+// View name: cmos_sch
+subckt TIELO Y inh_inh_bn _net0
+    M0 (Y net3 0 _net0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M1 (net3 net3 vdd! inh_inh_bn) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+ends TIELO
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: XOR
+// View name: cmos_sch
+subckt XOR A B Y inh_inh_bn _net0
+    M10 (net5 B vdd! _net0) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M8 (net6 A vdd! _net0) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+    M3 (Y A net18 _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M2 (net18 net5 vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 \
+        ps=15.0u pd=15.0u m=1 region=sat
+    M1 (Y net6 net20 _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M0 (net20 B vdd! _net0) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    M11 (net5 B 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    M9 (net6 A 0 inh_inh_bn) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 \
+        ps=6u pd=6u m=1 region=sat
+    M7 (net17 B 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M6 (net19 net5 0 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M5 (Y A net17 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+    M4 (Y net6 net19 inh_inh_bn) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 \
+        ps=9u pd=9u m=1 region=sat
+ends XOR
+// End of subcircuit definition.
+
+// Library name: Lib6710_Personal
+// Cell name: sstest
+// View name: schematic
+I0 (net3 net4 net5 net1 net2 0 vdd!) ADDER
+I1 (net7 net8 net9 net10 net6 vdd! 0) AOI22
+I3 (net12 net11 vdd! 0) BUFX4
+I4 (net14 net13 vdd! 0) BUFX8
+I5 (net17 net18 net19 net15 net16 0 vdd!) DFF
+I6 (net21 net20 vdd! 0) INVX1
+I7 (net23 net22 vdd! 0) INVX4
+I8 (net25 net24 vdd! 0) INVX8
+I9 (net27 net28 net29 net30 net26 vdd! 0) MUX2X1
+I10 (net32 net33 net31 vdd! 0) NAND2X1
+I12 (net35 net36 net34 vdd! 0) NAND2X2
+I13 (net38 net39 net37 vdd! 0) NOR2X1
+I14 (net41 net42 net43 net44 net40 0 vdd!) OAI22
+I15 (net45 vdd! 0) TIEHI
+I16 (net46 vdd! 0) TIELO
+I17 (net48 net49 net47 0 vdd!) XOR
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub
