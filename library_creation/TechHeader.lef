@@ -1,0 +1,204 @@
+###########################
+# 
+# This is the TechHeader.lef file that contains the 
+# technology information for the AMI C5N 0.5 micron 
+# CMOS technology (SCN3M_SUBM when using MOSIS)
+# 
+# Erik Brunvand
+###########################
+
+VERSION 5.6 ;
+
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+PROPERTYDEFINITIONS
+  MACRO icVersionStamp STRING ;
+  MACRO drcSignature INTEGER ;
+  MACRO viewNameList STRING ;
+  LIBRARY minWidth REAL 1.5 ;
+  LIBRARY PadType STRING "Perimeter" ;
+  LIBRARY technology STRING "UofU_AMI_C5N" ;
+  LIBRARY model STRING "ami06" ;
+  LIBRARY gridResolution REAL 0.15 ;
+  LIBRARY minLength REAL 0.6 ;
+  LAYER sheetResistance INTEGER ;
+END PROPERTYDEFINITIONS
+
+UNITS
+  DATABASE MICRONS 1000 ;
+END UNITS
+MANUFACTURINGGRID 0.15 ;
+
+LAYER poly
+  TYPE  MASTERSLICE ;
+END poly
+
+LAYER cc
+  TYPE  CUT ;
+  SPACING       0.9 ;
+END cc
+
+LAYER metal1
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 3 3 ;
+  WIDTH 0.9 ;
+  SPACING 0.9 ;
+  OFFSET 1.5 ;
+  THICKNESS 0.64 ;
+  HEIGHT 0.38 ;
+  RESISTANCE RPERSQ 0.085 ;
+  CAPACITANCE CPERSQDIST 3.2e-05 ;
+  EDGECAPACITANCE 7.5e-05 ;
+END metal1
+
+LAYER via
+  TYPE CUT ;
+  SPACING 0.9 ;
+END via
+
+LAYER metal2
+  TYPE ROUTING ;
+  DIRECTION VERTICAL ;
+  PITCH 2.4 2.4 ;
+  WIDTH 0.9 ;
+  SPACING 0.9 ;
+  OFFSET        1.2 ;
+  THICKNESS 0.57 ;
+  HEIGHT 1.62 ;
+  RESISTANCE RPERSQ 0.085 ;
+  CAPACITANCE CPERSQDIST 1.6e-05 ;
+  EDGECAPACITANCE 6.0e-05 ;
+END metal2
+
+LAYER via2
+  TYPE CUT ;
+  SPACING 0.9 ;
+END via2
+
+LAYER metal3
+  TYPE ROUTING ;
+  DIRECTION HORIZONTAL ;
+  PITCH 3 3 ;
+  WIDTH 1.5 ;
+  SPACING 0.9 ;
+  OFFSET        1.5 ;
+  THICKNESS 0.77 ;
+  HEIGHT 2.79 ;
+  RESISTANCE RPERSQ 0.055 ;
+  CAPACITANCE CPERSQDIST 1e-05 ;
+  EDGECAPACITANCE 4.0e-05 ;
+END metal3
+
+LAYER OVERLAP
+  TYPE OVERLAP ;
+END OVERLAP
+
+VIA M2_M1_via DEFAULT
+  RESISTANCE 0.90 ; 
+  LAYER metal1 ;
+    RECT -0.6 -0.6 0.6 0.6 ;
+  LAYER via ;
+    RECT -0.3 -0.3 0.3 0.3 ;
+  LAYER metal2 ;
+    RECT -0.6 -0.6 0.6 0.6 ;
+END M2_M1_via
+
+VIA M3_M2_via DEFAULT
+  RESISTANCE 0.80 ;
+  LAYER metal2 ;
+    RECT -0.6 -0.6 0.6 0.6 ;
+  LAYER via2 ;
+    RECT -0.3 -0.3 0.3 0.3 ;
+  LAYER metal3 ;
+    RECT -0.9 -0.9 0.9 0.9 ;
+END M3_M2_via
+
+VIARULE M3_M2 GENERATE
+  LAYER metal2 ;
+    ENCLOSURE 0.3 0.3 ;
+  LAYER metal3 ;
+    ENCLOSURE 0.6 0.6 ;
+  LAYER via2 ;
+    RECT -0.3 -0.3 0.3 0.3 ;
+    SPACING 1.5 BY 1.5 ;
+  RESISTANCE 0.80 ;
+END M3_M2
+
+VIARULE M2_M1 GENERATE
+  LAYER metal1 ;
+    ENCLOSURE 0.3 0.3 ;
+  LAYER metal2 ;
+    ENCLOSURE 0.3 0.3 ;
+  LAYER via ;
+    RECT -0.3 -0.3 0.3 0.3 ;
+    SPACING 1.5 BY 1.5 ;
+  RESISTANCE 0.90 ; 
+END M2_M1
+
+VIARULE viagen21 GENERATE
+  LAYER metal1 ;
+    WIDTH 1.2 TO 120 ;
+    ENCLOSURE 0.3 0.3 ;
+  LAYER metal2 ;
+    WIDTH 1.2 TO 120 ;
+    ENCLOSURE 0.3 0.3 ;
+  LAYER via ;
+    RECT -0.3 -0.3 0.3 0.3 ;
+    SPACING 1.5 BY 1.5 ;
+  RESISTANCE 0.90 ;
+END viagen21
+
+VIARULE viagen32 GENERATE
+  LAYER metal2 ;
+    WIDTH 1.2 TO 120 ;
+    ENCLOSURE 0.6 0.6 ;
+  LAYER metal3 ;
+    WIDTH 1.8 TO 180 ;
+    ENCLOSURE 0.6 0.6 ;
+  LAYER via2 ;
+    RECT -0.3 -0.3 0.3 0.3 ;
+    SPACING 2.1 BY 2.1 ;
+  RESISTANCE 0.80 ;
+END viagen32
+
+#SPACING
+#  SAMENET metal1 metal1 0.9 ;
+#  SAMENET metal2 metal2 0.9 ;
+#  SAMENET metal3 metal3 0.9 ;
+#END SPACING
+
+SPACING
+  SAMENET metal1  metal1        0.900  STACK ;
+  SAMENET metal2  metal2        0.900  STACK ;
+  SAMENET metal3  metal3        0.900 ;
+  SAMENET cc  via       0.000  STACK ;
+  SAMENET via  via      0.900 ;
+  SAMENET via  via2     0.000  STACK ;
+  SAMENET via2  via2    0.900 ;
+END SPACING
+
+SITE corner
+  CLASS PAD ;
+  SYMMETRY Y R90 ;
+  SIZE 300 BY 300 ;
+END corner
+
+SITE IO
+  CLASS PAD ;
+  SYMMETRY Y ;
+  SIZE 90 BY 300 ;
+END IO
+
+SITE  dbl_core
+    CLASS       CORE ;
+    SYMMETRY    Y ;
+    SIZE        2.400 BY 54.000 ;
+END  dbl_core
+
+SITE core
+  CLASS CORE ;
+  SYMMETRY Y ;
+  SIZE 2.4 BY 27 ;
+END core
